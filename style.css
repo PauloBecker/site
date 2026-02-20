@@ -3,3 +3,150 @@
 img{
     border-radius: 10px;
 }
+
+.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e cores principais */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background: #004080;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Seções */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+/* Sobre mim */
+#sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+#sobre img {
+  border-radius: 10px;
+  max-width: 200px;
+}
+
+/* Habilidades */
+#habilidades table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#habilidades th, #habilidades td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+#habilidades th {
+  background: #004080;
+  color: #fff;
+}
+
+/* Projetos */
+#projeto article {
+  background: #e9f0f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea, form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background: #004080;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background: #003366;
+}
+
+/* Rodapé */
+footer {
+  background: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Tema escuro (ativado pelo JS) */
+.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background: #111;
+}
+
+.dark-mode nav a {
+  color: #eee;
+}
