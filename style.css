@@ -5,9 +5,6 @@ img{
     border-color: #030c05;
 }*/
 
-.imgDiv{
-   
-}
 
 .dark-mode {
   background-color: #222;
@@ -105,12 +102,38 @@ section h2 {
 }
 
 /* Projetos */
+/*
 #projeto article {
   background: #e9f0f9;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+}*/
+
+.projeto-card {
+  background: #e9f0f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+.projeto-card h3 {
+  color: #004080;
+}
+
+.projeto-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projeto-card a:hover {
+  text-decoration: underline;
+}
+
 
 /* Formulário de contato */
 form {
