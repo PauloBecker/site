@@ -1,7 +1,12 @@
-
-
+/*
 img{
     border-radius: 10px;
+    border-width: 50px;
+    border-color: #030c05;
+}*/
+
+.imgDiv{
+   
 }
 
 .dark-mode {
@@ -73,6 +78,10 @@ section h2 {
   gap: 20px;
 }
 
+.sobre{
+    
+}
+
 #sobre img {
   border-radius: 10px;
   max-width: 200px;
@@ -134,6 +143,12 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+}
+.adress{
+    background-color: #fff;
+    border-radius: 5px;
+    color: #030c05;
+    padding: 10px;
 }
 
 /* Tema escuro (ativado pelo JS) */
