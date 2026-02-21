@@ -201,7 +201,7 @@ form input, form textarea, form select {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+/*
 form input[type="submit"] {
   background: #004080;
   color: #fff;
@@ -211,7 +211,26 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background: #003366;
+}*/
+
+/*Button*/
+input[type="submit"] {
+  background-color: #ffcc00; /* cor de fundo contrastante */
+  color: #004080;            /* cor do texto */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* sombra para destaque */
+  transition: all 0.3s ease;
 }
+
+input[type="submit"]:hover {
+  background-color: #ffaa00; /* tom mais escuro no hover */
+  transform: scale(1.05);    /* leve zoom */
+}
+
 
 /* Rodapé */
 footer {
