@@ -27,7 +27,7 @@ body {
 }
 
 /* Cabeçalho */
-header {
+/*header {
   background: #004080;
   color: #fff;
   padding: 20px;
@@ -53,6 +53,44 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}*/
+
+header {
+  background: linear-gradient(90deg, #004080, #0066cc); /* gradiente */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* sombra suave */
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* permite aplicar transform corretamente */
+
+}
+
+nav a:hover {
+  color: chocolate; /* destaque ao passar o mouse */
+  transform: scale(1.1); /* leve zoom */
 }
 
 /* Seções */
@@ -68,20 +106,36 @@ section h2 {
 }
 
 /* Sobre mim */
-#sobre {
+/*#sobre {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
-}
+}*/
 
-.sobre{
-    
-}
 
-#sobre img {
-  border-radius: 10px;
+/*#sobre img {
+  border-radius: 100px;
   max-width: 200px;
+  
+}*/
+
+.sobre-container {
+  display: flex;
+  flex-direction: column; /* coloca a foto em cima e o texto abaixo */
+  align-items: center;    /* centraliza horizontalmente */
+  text-align: center;     /* centraliza o texto */
+}
+
+.foto-perfil {
+  height: 200px;
+  border-radius: 50%; /* deixa a foto redonda (opcional) */
+  margin-bottom: 20px; /* espaço entre a foto e o texto */
+  
+}
+
+.sobre-texto {
+  max-width: 600px; /* limita a largura do texto para não ficar muito esticado */
 }
 
 /* Habilidades */
@@ -172,6 +226,47 @@ footer {
     border-radius: 5px;
     color: #030c05;
     padding: 10px;
+}
+
+.adress a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+.adress a:hover {
+  color: #004080; /* muda a cor ao passar o mouse */
+}
+
+footer {
+  background: #004080;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.social-icons {
+  margin: 15px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover .fa-whatsapp { color: #25D366; }
+.social-icons a:hover .fa-envelope { color: #D44638; }
+.social-icons a:hover .fa-linkedin { color: #0077B5; }
+.social-icons a:hover .fa-github { color: #000000; }
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
 }
 
 /* Tema escuro (ativado pelo JS) */

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paulo Becker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
                 <li><a href="#contato">Contatos</a></li>
                 <li><a href="https://www.linkedin.com/in/paulo-becker-89550177/" target="_blank"
                         rel="noopener noreferrer">LinkedIn</a></li>
-                <a href="https://github.com/PauloBecker" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <li><a href="https://github.com/PauloBecker" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <!-- <li>Sobre mim</li> -->
             </ul>
         </nav>
@@ -29,31 +30,37 @@
 
     <section id="sobre">
         <h2>Sobre mim</h2>
-        <div class="imgDiv">
-            <img src="fotoDoc.jpg" alt="Foto Paulo Becker" height="200p">
-        </div>
-
-        <article>
-
-            <p>
-                Olá! Meu nome é Paulo Becker, estou no penúltimo semestre da graduação em Análise e Desenvolvimento de
-                Sistemas pelo Instituto Federal de Santa Catarina, atualmente dedicado ao meu TCC. Tenho experiência em
-                desenvolvimento com HTML, CSS, JavaScript, além de conhecimentos em Java, MySQL e C#.
-            </p>
-            <p>
-                Já realizei estágio em desenvolvimento com .NET e acumulo 13 anos de experiência no setor de
-                telecomunicações, sendo os últimos 3 como analista de datacenter. Essa trajetória me proporcionou uma
-                visão ampla sobre infraestrutura e desenvolvimento de sistemas.
-            </p>
-            <p>
-                Sou dedicado, curioso e comprometido com o aprendizado contínuo, buscando consolidar uma carreira sólida
-                na área de programação e contribuir com soluções tecnológicas de impacto.
-            </p>
+        <div class="sobre-container">
+            <img src="fotoDoc.jpg" alt="Foto Paulo Becker" class="foto-perfil">
+         
+            <article class="sobre-texto">
 
 
+                <article>
 
+                    <p>
+                        Olá! Meu nome é Paulo Becker, estou no penúltimo semestre da graduação em Análise e
+                        Desenvolvimento de
+                        Sistemas pelo Instituto Federal de Santa Catarina, atualmente dedicado ao meu TCC. Tenho
+                        experiência em
+                        desenvolvimento com HTML, CSS, JavaScript, além de conhecimentos em Java, MySQL e C#.
+                    </p>
+                    <p>
+                        Já realizei estágio em desenvolvimento com .NET e acumulo 13 anos de experiência no setor de
+                        telecomunicações, sendo os últimos 3 como analista de datacenter. Essa trajetória me
+                        proporcionou uma
+                        visão ampla sobre infraestrutura e desenvolvimento de sistemas.
+                    </p>
+                    <p>
+                        Sou dedicado, curioso e comprometido com o aprendizado contínuo, buscando consolidar uma
+                        carreira sólida
+                        na área de programação e contribuir com soluções tecnológicas de impacto.
+                    </p>
+
+            
+   
         </article>
-
+</div>
         <aside>
 
             <h3>Habilidades</h3>
@@ -67,7 +74,7 @@
             </ul>
 
         </aside>
-
+        
     </section>
 
     <section id="projeto">
@@ -79,22 +86,34 @@
             <p>Landing page desenvolvida para apresentar minha trajetória acadêmica e profissional, utilizando HTML, CSS
                 e JavaScript.</p>
             <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
-            <a href="https://github.com/PauloBecker/site" target="_blank">Ver código no GitHub</a>
+            <a href="https://github.com/PauloBecker/site" target="_blank">Ver código no GitHub</a><br>
+            <a href="https://paulobecker.github.io/site/" target="_blank" rel="noopener noreferrer">Acesse o site</a>
         </article>
 
         <article class="projeto-card">
             <h3>Desafio de projeto</h3>
-            <p>Atividade de desafio de projeto do bootcamp em C#. Proposta: Implementar as classes faltantes do projeto usando herança, polimosfirsmo e POO.</p>
+            <p>Atividade de desafio de projeto do bootcamp em C#. Proposta: Implementar as classes faltantes do projeto
+                usando herança, polimosfirsmo e POO.</p>
             <p><strong>Tecnologias:</strong> C#</p>
             <a href="https://github.com/PauloBecker/site" target="_blank">Ver código no GitHub</a>
-        </article>
 
+        </article>
+        <article class="projeto-card">
+            <h3>Proway Computers</h3>
+            <p>Projeto de uma loja virtual de componentes de informática feita durante aula no curso full-stack da
+                empresa Capgemini</p>
+            <p><strong>Tecnologias:</strong> Typescript, HTML, CSS e Angular CLI</p>
+            <a href="https://github.com/PauloBecker/proway-computers" target="_blank">Ver código no GitHub</a>
+
+        </article>
         <article class="projeto-card">
             <h3>Web site - Pordutora cultural</h3>
-            <p>Web site desenvolvido em grupo no curso Devs2Blu - Proway onde minha contribuição foi na paágina de contato e trabalhe conosco onde implementei uma API de CEP.</p>
+            <p>Web site desenvolvido em grupo no curso Devs2Blu - Proway onde minha contribuição foi na paágina de
+                contato e trabalhe conosco onde implementei uma API de CEP.</p>
             <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
             <a href="https://github.com/PauloBecker/TrabalhoProd.Cultural">Ver código no GitHub</a><br>
-            <a href="https://cuelhosandra.github.io/TrabalhoProd.Cultural/" target="_blank" rel="noopener noreferrer">Acesse o site</a>
+            <a href="https://cuelhosandra.github.io/TrabalhoProd.Cultural/" target="_blank"
+                rel="noopener noreferrer">Acesse o site</a>
         </article>
         <article class="projeto-card">
             <h3>soccer-news-app</h3>
@@ -144,9 +163,12 @@
                 <tr>
                     <td>Java</td>
                     <td>Intermediário</td>
-                    <td>Experiência acadêmica em programação orientada a objetos, integração com MySQL e boas práticas de desenvolvimento. 
-    Além disso, já tive contato com o framework Spring Boot em cursos, explorando conceitos de criação de APIs REST, 
-    configuração de projetos e utilização de bibliotecas modernas para desenvolvimento back-end.</td>
+                    <td>Experiência acadêmica em programação orientada a objetos, integração com MySQL e boas práticas
+                        de desenvolvimento.
+                        Além disso, já tive contato com o framework Spring Boot em cursos, explorando conceitos de
+                        criação de APIs REST,
+                        configuração de projetos e utilização de bibliotecas modernas para desenvolvimento back-end.
+                    </td>
                 </tr>
                 <tr>
                     <td>MySQL</td>
@@ -162,11 +184,10 @@
     </section>
 
     <footer>
-        <p>Direitos reservados a Paulo Becker</p>
 
         <section id="contato">
             <h2>Contato</h2>
-            <p>Tem um projeto em mente? Entre em contato.</p>
+            <h3>Tem um projeto em mente? Entre em contato.</h3><br>
 
             <form action="form-contato">
 
@@ -215,21 +236,31 @@
             </form>
 
             <br>
-
             <address class="adress">
-                E-mail: <a href="beckerpaulo81@gmail.com">beckerpaulo81@gmail.com</a> <br>
-                <!-- Telefone: <a href="https://wa.me/5547997339855" target="_blank">+55 (47) 99733-9855</a> -->
-                Whatsapp: <a
-                    href="https://wa.me/5547997339855?text=Olá%20Paulo,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar!"
+                <a href="https://wa.me/5547997339855?text=Olá%20Paulo,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar!"
                     target="_blank">
-                    +55 (47) 99733-9855
-                </a><br>
-                Redes Sociais: <a href="https://www.linkedin.com/in/paulo-becker-89550177/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a> |
-                <a href="https://github.com/PauloBecker" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="mailto:beckerpaulo81@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/paulo-becker-89550177/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://github.com/PauloBecker" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
             </address>
+            <div class="footer-copy">
+                <p>&copy; Direitos reservados a Paulo Becker</p>
+            </div>
+
         </section>
+
     </footer>
     <script src="script.js"></script>
 </body>
