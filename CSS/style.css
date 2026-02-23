@@ -8,7 +8,8 @@ img{
 
 .dark-mode {
   background-color: #222;
-  color: #eee;
+  color: #eee; 
+  
 }
 
 /* Reset básico */
@@ -22,8 +23,10 @@ img{
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f9;
-  color: #333;
+  /* background-color: #f4f4f9; */
+  background-color: #0b1220;
+  /*color: #333; */
+  color: #25D366;
 }
 
 /* Cabeçalho */
@@ -68,6 +71,7 @@ header h1 {
   font-family: 'Segoe UI', sans-serif;
   font-size: 28px;
   letter-spacing: 1px;
+  color: #25D366;
 }
 
 nav ul {
@@ -102,7 +106,8 @@ section {
 
 section h2 {
   margin-bottom: 20px;
-  color: #004080;
+  /* color: #004080; */
+  color: #25D366
 }
 
 /* Sobre mim */
@@ -138,6 +143,10 @@ section h2 {
   max-width: 600px; /* limita a largura do texto para não ficar muito esticado */
 }
 
+.sobre-texto{
+  color: turquoise;
+}
+
 /* Habilidades */
 #habilidades table {
   width: 100%;
@@ -153,6 +162,10 @@ section h2 {
 #habilidades th {
   background: #004080;
   color: #fff;
+}
+
+#habilidades td{
+  color: turquoise;
 }
 
 /* Projetos */
@@ -179,13 +192,16 @@ section h2 {
 .projeto-card a {
   display: inline-block;
   margin-top: 10px;
-  color: #004080;
-  text-decoration: none;
+  color: #004080;   text-decoration: none;
   font-weight: bold;
 }
 
 .projeto-card a:hover {
   text-decoration: underline;
+}
+
+.projeto-card p{
+  color: #333;
 }
 
 
