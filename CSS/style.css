@@ -30,40 +30,15 @@ body {
 }
 
 /* Cabeçalho */
-/*header {
-  background: #004080;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}*/
 
 header {
-  background: linear-gradient(90deg, #004080, #0066cc); /* gradiente */
+  background: linear-gradient(90deg, #013365, #0066cc); /* gradiente */
   color: #fff;
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* sombra suave */
+  
+  
 }
 
 header h1 {
@@ -72,15 +47,19 @@ header h1 {
   font-size: 28px;
   letter-spacing: 1px;
   color: #25D366;
+  
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
   margin: 0;
   padding: 0;
+  
+  
 }
 
 nav a {
@@ -89,13 +68,33 @@ nav a {
   font-weight: bold;
   transition: color 0.3s ease, transform 0.2s ease;
   display: inline-block; /* permite aplicar transform corretamente */
-
+  
 }
 
 nav a:hover {
   color: chocolate; /* destaque ao passar o mouse */
   transform: scale(1.1); /* leve zoom */
 }
+
+/* Menu padrão */
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Ícone hamburguer escondido no desktop */
+.hamburguer {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Overlay ativo */
+.overlay.active {
+  display: block;
+}
+
 
 /* Seções */
 section {
@@ -111,28 +110,21 @@ section h2 {
 }
 
 /* Sobre mim */
-/*#sobre {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
-}*/
-
-
-/*#sobre img {
-  border-radius: 100px;
-  max-width: 200px;
-  
-}*/
 
 .sobre-container {
   display: flex;
   flex-direction: column; /* coloca a foto em cima e o texto abaixo */
   align-items: center;    /* centraliza horizontalmente */
   text-align: center;     /* centraliza o texto */
+  
+}
+
+.sobre-container article{
+  padding: 20px;
 }
 
 .foto-perfil {
+  max-width: 100%;
   height: 200px;
   border-radius: 50%; /* deixa a foto redonda (opcional) */
   margin-bottom: 20px; /* espaço entre a foto e o texto */
@@ -143,8 +135,9 @@ section h2 {
   max-width: 600px; /* limita a largura do texto para não ficar muito esticado */
 }
 
-.sobre-texto{
+.sobre-texto {
   color: turquoise;
+ 
 }
 
 /* Habilidades */
@@ -169,13 +162,6 @@ section h2 {
 }
 
 /* Projetos */
-/*
-#projeto article {
-  background: #e9f0f9;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}*/
 
 .projeto-card {
   background: #e9f0f9;
@@ -217,17 +203,7 @@ form input, form textarea, form select {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-/*
-form input[type="submit"] {
-  background: #004080;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
 
-form input[type="submit"]:hover {
-  background: #003366;
-}*/
 
 /*Button*/
 input[type="submit"] {
@@ -318,3 +294,86 @@ footer {
 .dark-mode nav a {
   color: #eee;
 }
+
+/* Adaptando o site para diferentes tamanhos de tela - Media queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav ul {
+    flex-direction: column; /* menu vira lista vertical */
+    gap: 10px;
+  }
+
+  input[type="submit"] {
+    width: 100%; /* botão ocupa toda a largura no mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  input[type="submit"] {
+    width: 100%; /* ocupa toda a largura no celular */
+  }
+}
+
+/*Menu Responsivo */
+@media (max-width: 768px) {
+  .menu {
+    display: none;              /* mantém flex para poder virar coluna */
+    flex-direction: column;
+    background: #004080;
+    position: fixed;            /* fixo na lateral */
+    top: 0;
+    right: 0px;              /* começa fora da tela */
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 999;
+  }
+
+  .menu.active {
+     display: flex;              /* mostra menu */
+    transform: translateX(0);   /* desliza para dentro */
+  }
+
+  .hamburguer {
+    display: block;             /* mostra ícone no mobile */
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
+    color: #fff;
+  }
+
+  .hamburguer.active {
+    color: #ffcc00;             /* destaque quando ativo */
+  }
+
+  /* Overlay */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 900; /* abaixo do menu */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
+
+}
+
+
+
+

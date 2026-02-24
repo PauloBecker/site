@@ -3,6 +3,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const cepInput = document.getElementById("cep");
+  const hamburguer = document.getElementById("hamburguer");
+  const menu = document.querySelector(".menu");
+  const overlay = document.getElementById("overlay");
+
+
+  hamburguer.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+
+    if (menu.classList.contains("active")) {
+      hamburguer.textContent = "✖"; // muda para X
+    } else {
+      hamburguer.textContent = "☰"; // volta para hamburguer
+    }
+  });
+
+  // Fecha o menu se clicar no overlay
+  overlay.addEventListener("click", () => {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    hamburguer.textContent = "☰";
+  });
+
+
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();

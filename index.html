@@ -11,10 +11,12 @@
 
 <body>
     <header>
-        <h1>Portfólio - Paulo Becker</h1>
+        <strong>
+            <h1>Portfólio - Paulo Becker</h1>
+        </strong>
 
         <nav> <!-- Seção de navegação do site. -->
-            <ul> <!-- Lista não ordenada para links do nosso menu. -->
+            <ul class="menu"> <!-- Lista não ordenada para links do menu. -->
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projeto">Projetos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
@@ -24,9 +26,13 @@
                 <li><a href="https://github.com/PauloBecker" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <!-- <li>Sobre mim</li> -->
             </ul>
+            <div class="hamburguer" id="hamburguer">
+                ☰
+            </div>
         </nav>
 
     </header>
+    <div class="overlay" id="overlay"></div>
 
     <section id="sobre">
         <h2>Sobre mim</h2>
@@ -35,31 +41,28 @@
 
             <article class="sobre-texto">
 
-
-                <article>
-
-                    <p>
-                        Olá! Meu nome é Paulo Becker, estou no penúltimo semestre da graduação em Análise e
-                        Desenvolvimento de
-                        Sistemas pelo Instituto Federal de Santa Catarina, atualmente dedicado ao meu TCC. Tenho
-                        experiência em
-                        desenvolvimento com HTML, CSS, JavaScript, além de conhecimentos em Java, MySQL e C#.
-                    </p>
-                    <p>
-                        Já realizei estágio em desenvolvimento com .NET e acumulo 13 anos de experiência no setor de
-                        telecomunicações, sendo os últimos 3 como analista de datacenter. Essa trajetória me
-                        proporcionou uma
-                        visão ampla sobre infraestrutura e desenvolvimento de sistemas.
-                    </p>
-                    <p>
-                        Sou dedicado, curioso e comprometido com o aprendizado contínuo, buscando consolidar uma
-                        carreira sólida
-                        na área de programação e contribuir com soluções tecnológicas de impacto.
-                    </p>
+                <p>
+                    Olá! Meu nome é Paulo Becker, estou no penúltimo semestre da graduação em Análise e
+                    Desenvolvimento de
+                    Sistemas pelo Instituto Federal de Santa Catarina, atualmente dedicado ao meu TCC. Tenho
+                    experiência em
+                    desenvolvimento com HTML, CSS, JavaScript, além de conhecimentos em Java, MySQL e C#.
+                </p>
+                <p>
+                    Já realizei estágio em desenvolvimento com .NET e acumulo 13 anos de experiência no setor de
+                    telecomunicações, sendo os últimos 3 como analista de datacenter. Essa trajetória me
+                    proporcionou uma
+                    visão ampla sobre infraestrutura e desenvolvimento de sistemas.
+                </p>
+                <p>
+                    Sou dedicado, curioso e comprometido com o aprendizado contínuo, buscando consolidar uma
+                    carreira sólida
+                    na área de programação e contribuir com soluções tecnológicas de impacto.
+                </p>
 
 
 
-                </article>
+            </article>
         </div>
 
     </section>
@@ -188,7 +191,7 @@
                 <input type="text" id="cep" name="cep" required>
 
                 <label for="rua">Logradouro:</label>
-                <input type="text" id="rua" name="rua">
+                <input type="text" id="rua" name="rua" required>
 
                 <label for="bairro">Bairro:</label>
                 <input type="text" id="bairro" name="bairro">
